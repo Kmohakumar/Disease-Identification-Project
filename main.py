@@ -1,13 +1,13 @@
 from fastapi import FastAPI, File, UploadFile
-from tensorflow.keras.preprocessing import image
 from PIL import Image
 import numpy as np
 import tensorflow_addons as tfa
-from tensorflow.keras.metrics import Metric
-from tensorflow import keras
+# from tensorflow.keras.metrics import Metric
+# from tensorflow import keras
 
 # print("hello")
 from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
 
 
 model = load_model('./FV.h5')
