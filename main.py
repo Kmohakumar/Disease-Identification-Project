@@ -34,6 +34,14 @@ with keras.utils.custom_object_scope({'F1Score': F1Score}):
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.post('/classify')
 async def predict(image: UploadFile = File(...)):
     try:
