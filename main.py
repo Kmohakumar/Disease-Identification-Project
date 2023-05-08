@@ -4,6 +4,7 @@ import numpy as np
 import tensorflow_addons as tfa
 from tensorflow.keras.metrics import Metric
 from tensorflow import keras
+from fastapi.middleware.cors import CORSMiddleware
 
 # print("hello")
 from keras.models import load_model
